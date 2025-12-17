@@ -7,7 +7,7 @@ class SocketService {
     this.io = io;
 
     io.on('connection', (socket) => {
-      console.log('🔌 Cliente conectado:', socket.id);
+      console.log('🔌 Cliente conectado:', socket.id || 'ID no disponible');
 
       // Cliente se suscribe a un partido específico
       socket.on('subscribe_match', (matchId) => {
